@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "70810fea-6fdf-491e-88c1-f81d57aba9b4",
+		"name": "S19D1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29965341"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "saveWithoutActors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lord of the Rings Twice Tower\",\r\n    \"directorName\": \"Peter Jackson\",\r\n    \"rating\": 4.5,\r\n    \"releaseDate\": \"12.10.2001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/movies/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveWithActors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Lord of the Rings The Isengard\",\r\n    \"directorName\":\"Peter Jackson\",\r\n    \"rating\":4.5,\r\n    \"releaseDate\":\"12.10.2005\",\r\n    \"actorList\":[\r\n        {\"firstName\":\"Orlando Magic\",\"lastName\":\"Bloom\",\"gender\":\"Male\",\"birthDate\":\"02.03.1961\"},\r\n        {\"firstName\":\"Gandalf\",\"lastName\":\"Whitebeard\",\"gender\":\"Male\",\"birthDate\":\"02.03.1700\"},\r\n        {\"firstName\":\"Galadriel\",\"lastName\":\"Elfova\",\"gender\":\"Female\",\"birthDate\":\"02.03.1300\"}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/movies/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/movies/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"movies",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/movies/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/movies/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActorsFromMovie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/movies/4/actors",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"movies",
+								"4",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Matrix\",\r\n    \"directorName\": \"Peter Parker\",\r\n    \"rating\": 4,\r\n    \"releaseDate\": \"12.10.2004\",\r\n    \"actorList\": [\r\n        {\r\n            \"firstName\": \"Leo\",\r\n            \"lastName\": \"Caplan\",\r\n            \"gender\": \"Male\",\r\n            \"birthDate\": \"12.02.2023\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/movies/5",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"movies",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actors",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Sam \",\r\n    \"lastName\": \"Yelloz\",\r\n    \"gender\": \"Male\",\r\n    \"birthDate\": \"12.01.1650\",\r\n    \"movieList\": [\r\n        {\r\n            \"name\": \"Lord of the Rings Twice Tower\",\r\n            \"directorName\": \"Peter Jackson\",\r\n            \"rating\": 4.5,\r\n            \"releaseDate\": \"12.10.2001\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/actors/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"actors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/actors/",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"actors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/actors/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMoviesFromActor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/actors/6/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"actors",
+								"6",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/actors/6",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"actors",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Haluk\",\r\n    \"lastName\": \"Bilginer\",\r\n    \"gender\": \"Male\",\r\n    \"birthDate\": \"12.01.1950\",\r\n    \"movieList\": [\r\n        \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/app/v1/workintech/actors/6",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"app",
+								"v1",
+								"workintech",
+								"actors",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

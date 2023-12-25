@@ -5,8 +5,6 @@ import com.workintech.dto.MovieResponse;
 import com.workintech.entity.Actor;
 
 import java.util.List;
-import java.util.Optional;
-
 
 public interface ActorService {
     Actor findById(Long id);

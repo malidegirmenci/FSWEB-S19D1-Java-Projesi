@@ -5,7 +5,6 @@ import com.workintech.dto.MovieResponse;
 import com.workintech.entity.Movie;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface MovieService {
     Movie findById(Long id);

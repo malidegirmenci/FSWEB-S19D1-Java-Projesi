@@ -1,5 +1,6 @@
 package com.workintech.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -51,5 +52,4 @@ public class Movie {
         }
         actorList.add(actor);
     }
-
 }

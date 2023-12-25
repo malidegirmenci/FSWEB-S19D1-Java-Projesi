@@ -14,8 +14,7 @@ public class DtoConverter {
                 movie.getName(),
                 movie.getDirectorName(),
                 movie.getRating(),
-                movie.getReleaseDate(),
-                movie.getActorList() == null ? new ArrayList<>() : convertToActorResponseList(movie.getActorList())
+                movie.getReleaseDate()
         );
     }
     public static List<MovieResponse> convertToMovieResponseList(List<Movie> movieList){
@@ -24,8 +23,7 @@ public class DtoConverter {
                 movie.getName(),
                 movie.getDirectorName(),
                 movie.getRating(),
-                movie.getReleaseDate(),
-                movie.getActorList() == null ? new ArrayList<>() : convertToActorResponseList(movie.getActorList())
+                movie.getReleaseDate()
         )));
         return responses;
     }
